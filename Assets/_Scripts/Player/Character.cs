@@ -1,6 +1,7 @@
+using Unity.Netcode;
 using UnityEngine;
 
-public class Character : MonoBehaviour
+public class Character : NetworkBehaviour
 {
     public float moveSpeed = 5f;
     public float jumpForce = 10f;
@@ -17,6 +18,8 @@ public class Character : MonoBehaviour
 
     void Update()
     {
+        if(!IsOwner || !IsSpawned) return;
+        
         // Horizontal movement
         float moveInput = Input.GetAxis("Horizontal");
         rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
