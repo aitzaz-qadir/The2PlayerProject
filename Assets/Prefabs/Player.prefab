@@ -160,8 +160,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShowTopMostFoldoutHeaderGroup: 1
   moveSpeed: 5
-  jumpForce: 10
-  gravityScale: 1
+  jumpForce: 7
+  gravityScale: 2
 --- !u!114 &8100031916227622473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -249,7 +249,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.009354174, y: -0.9494025}
+  m_Offset: {x: 0.0010441542, y: -0.9376739}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -259,7 +259,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.6874903, y: 2.306771}
+  m_Size: {x: 1.5098464, y: 2.1261904}
   m_EdgeRadius: 0
 --- !u!95 &8189138566183853437
 Animator:
