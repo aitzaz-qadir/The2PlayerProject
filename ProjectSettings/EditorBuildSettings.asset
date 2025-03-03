@@ -8,6 +8,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Multiplayer.unity
     guid: 4abd988e49f2f2671bdb8dac4d647619
+  - enabled: 1
+    path: Assets/Scenes/Animation.unity
+    guid: 81068648a7aa8ee4bb33015dd47358de
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
