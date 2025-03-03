@@ -24,6 +24,14 @@ public class Character : NetworkBehaviour
         
         // Horizontal movement
         float moveInput = Input.GetAxis("Horizontal");
+
+        // Flip based on movement direction
+        if (moveInput > 0) {
+            transform.localScale = new Vector3(1, 1, 1); // Facing right
+        } else if (moveInput < 0) {
+            transform.localScale = new Vector3(-1, 1, 1); // Facing left
+        }
+
         rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
 
         // Update the animator
