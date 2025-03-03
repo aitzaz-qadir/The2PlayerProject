@@ -9,10 +9,12 @@ public class Character : NetworkBehaviour
 
     private Rigidbody2D rb;
     private bool isGrounded;
+    private Animator animator;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
         rb.gravityScale = gravityScale;
     }
 
@@ -23,6 +25,9 @@ public class Character : NetworkBehaviour
         // Horizontal movement
         float moveInput = Input.GetAxis("Horizontal");
         rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
+
+        // Update the animator
+        animator.SetBool("IsMoving", moveInput != 0);
 
         // Jumping
         if (Input.GetButtonDown("Jump") && isGrounded)
